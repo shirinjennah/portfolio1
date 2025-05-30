@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="port.css">
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init({
+            publicKey: "pBVdzVMQb7qYR0bGo",
+          });
+       })();
+    </script>
+    <script>
+        function SendMail() {
+            var params = {
+                from_name: document.getElementById("fullName").value,
+                email_id: document.getElementById("email_id").value,
+                message: document.getElementById("message").value
+            };
+            
+            emailjs.send("service_id", "template_id", params).then(function(res) {
+                alert("Success! " + res.status);
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="page">
+        <div class="main">
+            <a class="main1" href="#Portfolio">Portfolio</a>
+            <div class="main2">
+                <a href="#Home">Home</a>
+                <a href="#About">About</a>
+                <a href="#Skills">Skills</a>
+                <a href="#Projects">Projects</a>
+                <a href="#Contact">Contact</a>
+            </div>
+        </div>
+        
+        <div class="main3" id="Home">
+            <h1>Hi! I'm<br><b>SHIRIN</b></h1>
+            <p class="hi">A passionate and creative individual<br> exploring the world
+                of digital storytelling and technology. Currently a <br>Trainee, I enjoyed 
+                exploring this field. I believe in learning by doing,<br> I'm always 
+                eager to explore new tools and technologies to bring my <br>ideas to life.</p>
+            <img class="image" src="images/WhatsApp Image 2025-05-29 at 10.50.31 AM.jpeg" width="300" height="250" alt="SHIRIN">
+        </div>
+        
+        <div class="main4" id="About">
+           <h3>About me</h3>
+           <p class="p1">I love coding. It's more than just typing lines of code—it's a<br> 
+            way for me to think creatively, solve real problems, and build<br>
+             things that matter. Every time I start a new project,<br>
+             I get excited about the possibilities. I enjoy the process <br>
+             of figuring out how things work, breaking down complex problems,<br>
+              and finding solutions that are both smart and efficient. Sometimes<br>
+               it gets frustrating when something doesn't work, but I've learned to <br>
+               be patient and keep trying until I get it right. That's one of<br>
+                the things I love most about coding—it constantly teaches me to<br>
+                 think differently,to be persistent, and to keep learning. Whether<br>
+                  I'm experimenting with a new language, building a website,<br> 
+                  or just writing a simple script, I feel like I'm doing something <br>
+                  meaningful. Coding gives me a sense of purpose, and I know it's <br>
+                 something I want to keep growing in, both as a skill and as a passion.</p>
+        </div>
+        
+        <div class="main5" id="Skills">
+            <h3 class="skil">Skills</h3>
+            <div class="para1">
+                <img src="images/communication (1).png" height="60" width="60" alt="Communication">
+                <p>Communication</p>
+            </div>
+            <div class="para2">
+                <img src="images/html.png" height="50" width="50" alt="HTML">
+                <p>HTML</p>
+            </div>
+            <div class="para3">
+                <img src="images/css-3.png" height="50" width="50" alt="CSS">
+                <p>CSS</p>
+            </div>
+            <div class="para4">
+                <img src="images/java-script.png" height="50" width="50" alt="JavaScript">
+                <p>JAVA SCRIPT</p>
+            </div>
+        </div>
+        
+        <div class="main6" id="Projects">
+            <h3 class="proj">Projects</h3>
+            <div class="projects-container">
+                <div class="box">
+                    <img class="meth" src="images/Screenshot 2025-05-29 132356.png" alt="Spotify Clone">
+                    <span class="con">Spotify Clone website</span>
+                </div>
+                <div class="box1">
+                    <img class="meth1" src="images/main.png" alt="Flight Booking">
+                    <span class="con1">Flight booking clone websites</span>
+                </div>
+                <div class="box2">
+                    <img class="meth2" src="images/navebar.png" alt="W3S Navbar">
+                    <span class="con2">W3S Navbar</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="main7" id="Contact">
+            <h3>Contact</h3>
+            <div class="contact-form">
+                <input class="input" id="fullName" type="text" placeholder="Name">
+                <input class="input1" id="email_id" type="email" placeholder="E-mail">
+                <input class="input2" id="message" type="text" placeholder="Message">
+                <button onclick="SendMail()" class="btn">Submit</button>
+            </div>
+            
+            <div class="contact-info">
+                <div class="contact-item">
+                    <a href="https://www.instagram.com/">
+                        <img src="/images/vecteezy_instagram-logo-png-instagram-icon-transparent_18930415.png" alt="Instagram">
+                    </a>
+                    <p><i>@shirin_jannah</i></p>
+                </div>
+                <div class="contact-item">
+                    <a href="https://web.whatsapp.com/">
+                        <img src="images/whatspp.jpg" alt="WhatsApp">
+                    </a>
+                    <p><i>7025000754</i></p>
+                </div>
+                <div class="contact-item">
+                    <img src="images/email.avif" alt="Email">
+                    <p><i>shirinjennah2004@gmail.com</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
